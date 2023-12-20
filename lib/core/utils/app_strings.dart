@@ -1,0 +1,32 @@
+class AppStrings {
+  static const String elhamadCompany = "El Hamad Company";
+  static const String userLogin = "User Login";
+  static const String ip = "IP";
+  static const String dataBase = "Database";
+  static const String userName = "User Name";
+  static const String password = "Password";
+  static const String rememberPassword = "Remember Password";
+  static const String logIn = "Log In";
+  static const String demoVersion = "Demo Version";
+  static const String demoVersionYouCanBrowseOurDummyData = "Demo Version .You Can Browse Our Dummy Data .\nTo Have A Good Day";
+  static const String alesInvoice = "Sales Invoice";
+  static const String salesAmount = "Sales Amount";
+  static const String comparedByPreviousMonth = "(Compared by  previous month)";
+  static const String cash = "Cash";
+  static const String available = "Available";
+  static const String cashTransactions = "Cash Transactions";
+  static const String received = "Received";
+  static const String paid = "Paid";
+  static const String netAmount = "Net Amount";
+  static const String allTransactions = "All Transactions";
+  static const String home = "Home";
+  static const String transactions = "Transactions";
+  static const String reports = "Reports";
+  static const String lists = "Lists";
+  static const String search = "Search";
+  static const String contentType = "Content-Type";
+  static const String applicationJson = "application/json";
+  static const String serverFailure = "Server Failure";
+  static const String cacheFailure = "Cache Failure";
+  static const String unexpectedError = "Unexpected Error";
+}
