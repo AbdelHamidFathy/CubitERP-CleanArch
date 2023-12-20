@@ -23,8 +23,9 @@ class AppStrings {
   static const String transactions = "Transactions";
   static const String reports = "Reports";
   static const String lists = "Lists";
-  static const String search = "Search";
   static const String contentType = "Content-Type";
+  static const String search = "Search";
+  static const String salesInvoice = "Sales Invoice";
   static const String applicationJson = "application/json";
   static const String serverFailure = "Server Failure";
   static const String cacheFailure = "Cache Failure";
