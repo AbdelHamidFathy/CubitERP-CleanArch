@@ -1,6 +1,5 @@
 import 'package:dexef_task/core/utils/app_colors.dart';
 import 'package:dexef_task/core/utils/app_strings.dart';
-import 'package:dexef_task/core/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';

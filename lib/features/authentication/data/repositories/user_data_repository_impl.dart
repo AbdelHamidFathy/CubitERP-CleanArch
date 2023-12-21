@@ -17,7 +17,6 @@ class UserDataRepositoryImpl implements UserDataRepository {
 
   @override
   Future<Either<Failure, UserData>> getUserData({required params}) async {
-    // if (await networkInfo.isConnected) {
     try {
       final remoteRandomQuote =
           await userDataRemoteDataSource.getUserData(params: params);
@@ -26,14 +25,4 @@ class UserDataRepositoryImpl implements UserDataRepository {
       return Left(ServerFailure());
     }
   }
-  //   else {
-  //     try {
-  //       final cacheRandomQuote =
-  //           await randomQuoteLocalDataSource.getLastRandomQuote();
-  //       return Right(cacheRandomQuote);
-  //     } on CacheException {
-  //       return Left(CacheFailure());
-  //     }
-  //   }
-  // }
 }

@@ -1,4 +1,5 @@
 import 'package:dexef_task/config/routes/routes.dart';
+import 'package:dexef_task/core/utils/app_strings.dart';
 import 'package:dexef_task/features/authentication/persentation/screens/login.dart';
 import 'package:dexef_task/features/home/persentation/screens/home.dart';
 import 'package:dexef_task/features/splash/persentation/screens/splash.dart';
@@ -24,7 +25,7 @@ class AppRoutes {
     return MaterialPageRoute(
       builder: (context) => const Scaffold(
         body: Center(
-          child: Text("Undefined Route"),
+          child: Text(AppStrings.undefinedRoute),
         ),
       ),
     );

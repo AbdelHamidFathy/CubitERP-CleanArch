@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       create: (context) => di.sl<AuthCubit>(),
       child: Sizer(builder: (context, orientation, deviceType) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             useMaterial3: false,
           ),

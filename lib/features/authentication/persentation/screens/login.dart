@@ -1,6 +1,6 @@
 import 'package:dexef_task/core/utils/app_colors.dart';
 import 'package:dexef_task/core/utils/app_strings.dart';
-import 'package:dexef_task/core/utils/image_paths.dart';
+import 'package:dexef_task/core/utils/assets_manager.dart';
 import 'package:dexef_task/core/widgets/custom_button.dart';
 import 'package:dexef_task/core/widgets/custom_text.dart';
 import 'package:dexef_task/core/widgets/vertical_space.dart';
@@ -37,10 +37,10 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       SvgPicture.asset(
-                        ImagePaths.search,
+                        AssetsManager.search,
                       ),
                       SvgPicture.asset(
-                        ImagePaths.add,
+                        AssetsManager.add,
                       ),
                     ],
                   ),
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                   const VerticalSpace(),
                   const Image(
                       image: AssetImage(
-                    ImagePaths.loginImage,
+                    AssetsManager.loginImage,
                   )),
                   const VerticalSpace(),
                   CustomText(
@@ -60,6 +60,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const VerticalSpace(),
                   CustomTextForm(
+                    validate: (value) => value == null || value.isEmpty
+                        ? AppStrings.requiredField
+                        : null,
                     isPassword: false,
                     label: AppStrings.ip,
                     controller:
@@ -69,6 +72,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const VerticalSpace(),
                   CustomTextForm(
+                    validate: (value) => value == null || value.isEmpty
+                        ? AppStrings.requiredField
+                        : null,
                     isPassword: false,
                     label: AppStrings.dataBase,
                     controller:
@@ -78,6 +84,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const VerticalSpace(),
                   CustomTextForm(
+                    validate: (value) => value == null || value.isEmpty
+                        ? AppStrings.requiredField
+                        : null,
                     isPassword: false,
                     label: AppStrings.userName,
                     controller:
@@ -87,6 +96,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const VerticalSpace(),
                   CustomTextForm(
+                    validate: (value) => value == null || value.isEmpty
+                        ? AppStrings.requiredField
+                        : null,
                     isPassword: false,
                     label: AppStrings.password,
                     controller:
@@ -97,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                   const VerticalSpace(),
                   Row(
                     children: [
-                      SvgPicture.asset(ImagePaths.rememberPassword),
+                      SvgPicture.asset(AssetsManager.rememberPassword),
                       SizedBox(
                         width: 3.w,
                       ),

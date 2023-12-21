@@ -17,21 +17,27 @@ class AuthCubit extends Cubit<AuthState> {
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  GlobalKey formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
 
   Future<void> login({required BuildContext context}) async {
-    emit(LoginIsLoading());
-    Either<Failure, UserData> response = await getUserDataUseCase({
-      "ip": ipController.text,
-      "user_name": userNameController.text,
-      "dataBase": dataBaseController.text,
-      "lang": "ar",
-    });
-    emit(response.fold((failure) => LoginError(msg: _mapFailureToMsg(failure)),
-        (userData) {
-      Navigator.pushNamed(context, Routes.homeRoute);
-      return LoginLoaded(userData: userData);
-    }));
+    if (formKey.currentState!.validate()) {
+      emit(LoginIsLoading());
+      Either<Failure, UserData> response = await getUserDataUseCase({
+        "ip": ipController.text,
+        "user_name": userNameController.text,
+        "dataBase": dataBaseController.text,
+        "lang": "ar",
+      });
+      emit(
+        response.fold(
+          (failure) => LoginError(msg: _mapFailureToMsg(failure)),
+          (userData) {
+            Navigator.pushNamed(context, Routes.homeRoute);
+            return LoginLoaded(userData: userData);
+          },
+        ),
+      );
+    }
   }
 
   String _mapFailureToMsg(Failure failure) {

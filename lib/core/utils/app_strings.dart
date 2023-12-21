@@ -8,7 +8,8 @@ class AppStrings {
   static const String rememberPassword = "Remember Password";
   static const String logIn = "Log In";
   static const String demoVersion = "Demo Version";
-  static const String demoVersionYouCanBrowseOurDummyData = "Demo Version .You Can Browse Our Dummy Data .\nTo Have A Good Day";
+  static const String demoVersionYouCanBrowseOurDummyData =
+      "Demo Version .You Can Browse Our Dummy Data .\nTo Have A Good Day";
   static const String alesInvoice = "Sales Invoice";
   static const String salesAmount = "Sales Amount";
   static const String comparedByPreviousMonth = "(Compared by  previous month)";
@@ -30,4 +31,13 @@ class AppStrings {
   static const String serverFailure = "Server Failure";
   static const String cacheFailure = "Cache Failure";
   static const String unexpectedError = "Unexpected Error";
+  static const String requiredField = "Required Field";
+  static const String undefinedRoute = "Undefined Route";
+  static const String errorDuringCommunication = "Error During Communication";
+  static const String badRequest = "Bad Request";
+  static const String unauthorized = "Unauthorized";
+  static const String requestedInfoNotFound = "Requested Info Not Found";
+  static const String conflictOccurred = "Conflict Occurred";
+  static const String internalServerError = "Internal Server Error";
+  static const String noInternetConnection = "No Internet Connection";
 }

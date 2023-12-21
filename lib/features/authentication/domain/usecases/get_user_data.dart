@@ -5,7 +5,7 @@ import 'package:dexef_task/features/authentication/domain/repositories/user_data
 
 import '../../../../core/error/failures.dart';
 
-class GetUserData implements Usecase<UserData, Map<String,dynamic>> {
+class GetUserData implements Usecase<UserData, Map<String, dynamic>> {
   final UserDataRepository dataRepository;
 
   GetUserData({required this.dataRepository});
@@ -13,18 +13,3 @@ class GetUserData implements Usecase<UserData, Map<String,dynamic>> {
   Future<Either<Failure, UserData>> call(params) =>
       dataRepository.getUserData(params: params);
 }
-
-// class LoginParams extends Equatable {
-//   final String ip;
-//   final String dataBase;
-//   final String userName;
-//   final String lang;
-//   const LoginParams({
-//     required this.ip,
-//     required this.userName,
-//     required this.dataBase,
-//     required this.lang,
-//   });
-//   @override
-//   List<Object?> get props => [ip, dataBase, userName, lang];
-// }

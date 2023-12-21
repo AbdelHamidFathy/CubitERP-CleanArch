@@ -41,8 +41,6 @@ Future<void> init() async {
   sl.registerLazySingleton<ApiConsumer>(() => DioConsumer(client: sl()));
 
   //! External
-  // final sharedPreferences = await SharedPreferences.getInstance();
-  // sl.registerLazySingleton(() => sharedPreferences);
   sl.registerLazySingleton(() => AppIntercepters());
   sl.registerLazySingleton(() => LogInterceptor(
       request: true,

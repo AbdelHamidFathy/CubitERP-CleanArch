@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:dexef_task/config/routes/routes.dart';
-import 'package:dexef_task/core/utils/image_paths.dart';
+import 'package:dexef_task/core/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset(ImagePaths.splashScreen),
+        child: Image.asset(AssetsManager.splashScreen),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:dexef_task/core/utils/app_strings.dart';
 import 'package:equatable/equatable.dart';
 
 class ServerException extends Equatable implements Exception {
@@ -15,33 +16,34 @@ class ServerException extends Equatable implements Exception {
 }
 
 class FetchDataException extends ServerException {
-  const FetchDataException([message]) : super("Error During Communication");
+  const FetchDataException([message])
+      : super(AppStrings.errorDuringCommunication);
 }
 
 class BadRequestException extends ServerException {
-  const BadRequestException([message]) : super("Bad Request");
+  const BadRequestException([message]) : super(AppStrings.badRequest);
 }
 
 class UnauthorizedException extends ServerException {
-  const UnauthorizedException([message]) : super("Unauthorized");
+  const UnauthorizedException([message]) : super(AppStrings.unauthorized);
 }
 
 class NotFoundException extends ServerException {
-  const NotFoundException([message]) : super("Requested Info Not Found");
+  const NotFoundException([message]) : super(AppStrings.requestedInfoNotFound);
 }
 
 class ConflictException extends ServerException {
-  const ConflictException([message]) : super("Conflict Occurred");
+  const ConflictException([message]) : super(AppStrings.conflictOccurred);
 }
 
 class InternalServerErrorException extends ServerException {
   const InternalServerErrorException([message])
-      : super("Internal Server Error");
+      : super(AppStrings.internalServerError);
 }
 
 class NoInternetConnectionException extends ServerException {
   const NoInternetConnectionException([message])
-      : super("No Internet Connection");
+      : super(AppStrings.noInternetConnection);
 }
 
 class CacheException implements Exception {}
