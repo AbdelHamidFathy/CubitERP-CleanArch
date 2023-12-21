@@ -99,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                     validate: (value) => value == null || value.isEmpty
                         ? AppStrings.requiredField
                         : null,
-                    isPassword: false,
+                    isPassword: true,
                     label: AppStrings.password,
                     controller:
                         BlocProvider.of<AuthCubit>(context).passwordController,

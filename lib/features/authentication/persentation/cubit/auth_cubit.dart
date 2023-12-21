@@ -23,7 +23,10 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<void> login({required BuildContext context}) async {
     if (formKey.currentState!.validate()) {
-      if (passwordController.text == 1.toString()) {
+      if (passwordController.text == 1.toString() &&
+          ipController.text == "185.44.64.217,1437" &&
+          dataBaseController.text == "DEMO" &&
+          userNameController.text == "mahmoud") {
         emit(LoginIsLoading());
         Either<Failure, UserData> response = await getUserDataUseCase({
           "ip": ipController.text,
@@ -42,10 +45,9 @@ class AuthCubit extends Cubit<AuthState> {
         );
       } else {
         Fluttertoast.showToast(
-          msg: AppStrings.passwordIsNotCorrect,
-          backgroundColor: AppColors.red,
-          gravity: ToastGravity.BOTTOM
-        );
+            msg: AppStrings.invalidData,
+            backgroundColor: AppColors.red,
+            gravity: ToastGravity.BOTTOM);
       }
     }
   }
