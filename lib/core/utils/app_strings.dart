@@ -40,4 +40,5 @@ class AppStrings {
   static const String conflictOccurred = "Conflict Occurred";
   static const String internalServerError = "Internal Server Error";
   static const String noInternetConnection = "No Internet Connection";
+  static const String passwordIsNotCorrect = "Password not correct";
 }
